@@ -24,13 +24,13 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build Application JAR
-      working-directory: /home/runner/work/rest-with-spring-boot-and-java/rest-with-spring-boot-and-java
+      working-directory: /rest-with-spring-boot-and-java/rest-with-spring-boot-and-java
       run:  |
         pwd
         mvn clean package -DskipTests
     
     - name: Docker compose build
-      working-directory: /home/runner/work/rest-with-spring-boot-and-java
+      working-directory: /rest-with-spring-boot-and-java
       run: |
         pwd
         docker compose build

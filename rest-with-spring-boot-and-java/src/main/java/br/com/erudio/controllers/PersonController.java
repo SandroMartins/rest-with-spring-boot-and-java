@@ -56,7 +56,7 @@ public class PersonController {
 		Pageable pageable = PageRequest.of(page, size, Sort.by(sortDirection, "firstName"));
 		return ResponseEntity.ok(service.findAll(pageable));
 	}
-	
+	 
 	@GetMapping(value = "/findPersonByName/{firstName}", produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
 	@Operation(summary = "Finds People by name", description = "Finds People by name", 
 	tags = {"People"}, 
